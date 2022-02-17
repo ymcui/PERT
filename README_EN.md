@@ -1,4 +1,4 @@
-[**中文**](https://github.com/ymcui/PERT/) | [**English**](https://github.com/ymcui/PERT/blob/master/README_EN.md)
+[**中文**](https://github.com/ymcui/PERT/) | [**English**](https://github.com/ymcui/PERT/blob/main/README_EN.md)
 
 <p align="center">
     <br>
