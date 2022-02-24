@@ -10,7 +10,7 @@
         <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/PERT.svg?color=blue&style=flat-square">
     </a>
 </p>
-Please read our [Chinese README](./README_ZH.md) at the moment, while we are working on building README.md for English. 
+Please read our [Chinese README](https://github.com/ymcui/PERT/) at the moment, while we are working on building English README.md
 
 Thank you for your understanding.
 

@@ -10,7 +10,7 @@
         <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/PERT.svg?color=blue&style=flat-square">
     </a>
 </p>
-在自然语言处理领域中，预训练语言模型（Pre-trained Language Models，PLMs）已成为非常重要的基础技术。在近两年，哈工大讯飞联合实验室发布了多种中文预训练模型资源以及相关配套工具。作为相关工作的延续，在本项目中，我们提出了一种基于乱序语言模型的预训练模型（PERT），在不引入掩码标记[MASK]的情况下自监督地学习文本语义信息。*PERT在部分中英文NLU任务上获得性能提升，但也在部分任务上效果较差，请酌情使用。*目前提供了中文和英文的PERT模型，包含两种模型大小（base、large）。   
+在自然语言处理领域中，预训练语言模型（Pre-trained Language Models，PLMs）已成为非常重要的基础技术。在近两年，哈工大讯飞联合实验室发布了多种中文预训练模型资源以及相关配套工具。作为相关工作的延续，在本项目中，我们提出了一种基于乱序语言模型的预训练模型（PERT），在不引入掩码标记[MASK]的情况下自监督地学习文本语义信息。*PERT在部分中英文NLU任务上获得性能提升，但也在部分任务上效果较差，请酌情使用。* 目前提供了中文和英文的PERT模型，包含两种模型大小（base、large）。 
 
 论文：**PERT: Pre-Training BERT with Permuted Language Model（待后续上传）**   
 作者：Yiming Cui, Ziqing Yang, Ting Liu, Zhigang Chen
@@ -68,10 +68,10 @@
 
 | 模型简称                           | 语种 |          语料           | Google下载 |                          百度盘下载                          |
 | :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: |
-| **`Chinese-PERT-large`**           | 中文 |  EXT数据<sup>[1]</sup>  |   [TBA]    | [TensorFlow（密码：e9hs）](https://pan.baidu.com/s/1MG44TRIgqV6m_StfB_yBqQ?pwd=e9hs) |
-| **`Chinese-PERT-base`**            | 中文 |  EXT数据<sup>[1]</sup>  |   [TBA]    | [TensorFlow（密码：rcsw）](https://pan.baidu.com/s/1yDHkYKmdaJkliTGHWQtdFA?pwd=rcsw) |
-| **`English-PERT-large`** (uncased) | 英文 | WikiBooks<sup>[2]</sup> |   [TBA]    | [TensorFlow（密码：wxwi）](https://pan.baidu.com/s/1h62V5y_XH6VqlD820KnkFw?pwd=wxwi) |
-| **`English-PERT-base`** (uncased)  | 英文 | WikiBooks<sup>[2]</sup> |   [TBA]    | [TensorFlow（密码：8jgq）](https://pan.baidu.com/s/1fX4Epbgk8rR49A0xIAEWDw?pwd=8jgq) |
+| **Chinese-PERT-large**           | 中文 |  EXT数据<sup>[1]</sup>  |   [TBA]    | [TensorFlow（密码：e9hs）](https://pan.baidu.com/s/1MG44TRIgqV6m_StfB_yBqQ?pwd=e9hs) |
+| **Chinese-PERT-base**            | 中文 |  EXT数据<sup>[1]</sup>  |   [TBA]    | [TensorFlow（密码：rcsw）](https://pan.baidu.com/s/1yDHkYKmdaJkliTGHWQtdFA?pwd=rcsw) |
+| **English-PERT-large** (uncased) | 英文 | WikiBooks<sup>[2]</sup> |   [TBA]    | [TensorFlow（密码：wxwi）](https://pan.baidu.com/s/1h62V5y_XH6VqlD820KnkFw?pwd=wxwi) |
+| **English-PERT-base** (uncased)  | 英文 | WikiBooks<sup>[2]</sup> |   [TBA]    | [TensorFlow（密码：8jgq）](https://pan.baidu.com/s/1fX4Epbgk8rR49A0xIAEWDw?pwd=8jgq) |
 
 > [1] EXT数据包括：中文维基百科，其他百科、新闻、问答等数据，总词数达5.4B，约占用20G磁盘空间，与MacBERT相同。  
 > [2] Wikipedia + BookCorpus
@@ -94,6 +94,14 @@ chinese_pert_base_L-12_H-768_A-12.zip
 通过🤗transformers模型库可以下载TensorFlow (v2)和PyTorch版本模型。
 
 下载方法：点击任意需要下载的模型 → 选择"Files and versions"选项卡 → 下载对应的模型文件。
+
+| 模型简称 | 模型文件大小 | transformers模型库地址 |
+| :------- | :---------: |  :---------: |
+| **Chinese-PERT-large** | 1.2G | https://huggingface.co/hfl/chinese-pert-large |
+| **Chinese-PERT-base** | 0.4G | https://huggingface.co/hfl/chinese-pert-base |
+| **English-PERT-large** | 1.2G | https://huggingface.co/hfl/english-pert-large |
+| **English-PERT-base** | 0.4G | https://huggingface.co/hfl/english-pert-base |
+
 
 
 ## 快速加载
