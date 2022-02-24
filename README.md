@@ -58,7 +58,7 @@
 
 ## 模型下载
 
-#### 原版下载地址
+### 原版下载地址
 
 这里主要提供TensorFlow 1.15版本的模型权重。如需PyTorch或者TensorFlow2版本的模型，请看下一小节。
 
@@ -90,7 +90,7 @@ chinese_pert_base_L-12_H-768_A-12.zip
 
 其中`bert_config.json`和`vocab.txt`与谷歌原版`BERT-base, Chinese`完全一致（英文版与BERT-uncased版本一致）。
 
-#### PyTorch以及TensorFlow 2版本
+### PyTorch以及TensorFlow 2版本
 
 通过🤗transformers模型库可以下载TensorFlow (v2)和PyTorch版本模型。
 
