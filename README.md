@@ -2,7 +2,7 @@
 
 <p align="center">
     <br>
-    <img src="./pics/banner.png" width="500"/>
+    <img src="./pics/banner.png" width="450"/>
     <br>
 </p>
 <p align="center">
@@ -10,10 +10,11 @@
         <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/PERT.svg?color=blue&style=flat-square">
     </a>
 </p>
-在自然语言处理领域中，预训练语言模型（Pre-trained Language Models，PLMs）已成为非常重要的基础技术。在近两年，哈工大讯飞联合实验室发布了多种中文预训练模型资源以及相关配套工具。作为相关工作的延续，在本项目中，我们提出了一种基于乱序语言模型的预训练模型（PERT），在不引入掩码标记[MASK]的情况下自监督地学习文本语义信息。*PERT在部分中英文NLU任务上获得性能提升，但也在部分任务上效果较差，请酌情使用。* 目前提供了中文和英文的PERT模型，包含两种模型大小（base、large）。 
+在自然语言处理领域中，预训练语言模型（Pre-trained Language Models，PLMs）已成为非常重要的基础技术。在近两年，哈工大讯飞联合实验室发布了多种中文预训练模型资源以及相关配套工具。作为相关工作的延续，在本项目中，我们提出了一种基于乱序语言模型的预训练模型（PERT），在不引入掩码标记[MASK]的情况下自监督地学习文本语义信息。PERT在部分中英文NLU任务上获得性能提升，但也在部分任务上效果较差，请酌情使用。目前提供了中文和英文的PERT模型，包含两种模型大小（base、large）。 
 
-论文：**PERT: Pre-Training BERT with Permuted Language Model（待后续上传）**   
-作者：Yiming Cui, Ziqing Yang, Ting Liu, Zhigang Chen
+
+- **PERT: Pre-Training BERT with Permuted Language Model（待后续上传）**   
+- *Yiming Cui, Ziqing Yang, Ting Liu, Zhigang Chen*
 
 ----
 
