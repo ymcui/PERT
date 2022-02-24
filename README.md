@@ -10,19 +10,21 @@
         <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/PERT.svg?color=blue&style=flat-square">
     </a>
 </p>
-在自然语言处理领域中，预训练语言模型（Pre-trained Language Models，PLMs）已成为非常重要的基础技术。在近两年，哈工大讯飞联合实验室发布了多种中文预训练模型资源以及相关配套工具。作为相关工作的延续，在本项目中，我们提出了一种 **基于乱序语言模型的预训练模型（PERT）**，在不引入掩码标记[MASK]的情况下自监督地学习文本语义信息。*PERT在部分中英文NLU任务上获得性能提升，但也在部分任务上效果较差，请酌情使用。*目前提供了中文和英文的PERT模型，包含两种模型大小（base、large）。
+在自然语言处理领域中，预训练语言模型（Pre-trained Language Models，PLMs）已成为非常重要的基础技术。在近两年，哈工大讯飞联合实验室发布了多种中文预训练模型资源以及相关配套工具。作为相关工作的延续，在本项目中，我们提出了一种基于乱序语言模型的预训练模型（PERT），在不引入掩码标记[MASK]的情况下自监督地学习文本语义信息。*PERT在部分中英文NLU任务上获得性能提升，但也在部分任务上效果较差，请酌情使用。*目前提供了中文和英文的PERT模型，包含两种模型大小（base、large）。   
 
 论文：**PERT: Pre-Training BERT with Permuted Language Model（待后续上传）**   
 作者：Yiming Cui, Ziqing Yang, Ting Liu, Zhigang Chen
 
-其他资源：
+----
 
 [中文MacBERT](https://github.com/ymcui/MacBERT) | [中文ELECTRA](https://github.com/ymcui/Chinese-ELECTRA) | [中文XLNet](https://github.com/ymcui/Chinese-XLNet) | [中文BERT](https://github.com/ymcui/Chinese-BERT-wwm) |  [知识蒸馏工具TextBrewer](https://github.com/airaria/TextBrewer) | [模型裁剪工具TextPruner](https://github.com/airaria/TextPruner)
 
 查看更多哈工大讯飞联合实验室（HFL）发布的资源：https://github.com/ymcui/HFL-Anthology
 
 ## 新闻
-**2022/2/17   感谢对本项目的关注，预计下周发出模型，技术报告待完善后发出。**
+**2022/2/24 中文、英文的PERT-base和PERT-large已发布。可直接使用BERT结构加载并进行下游任务精调。技术报告待完善后发出，时间待定。**
+
+2022/2/17   感谢对本项目的关注，预计下周发出模型，技术报告待完善后发出。
 
 ## 内容导引
 | 章节                                  | 描述                                                         |
@@ -38,7 +40,7 @@
 ## 简介
 面向自然语言理解（NLU）的预训练模型的学习大致分为两类：使用和不使用带掩码标记[MASK]的输入文本。
 
-算法启发：一定程度的乱序文本不影响理解。
+算法启发：一定程度的乱序文本不影响理解。那么能否从乱序文本中学习语义知识？
 
 大体思想：PERT对原始输入文本进行一定的词序调换，从而形成乱序文本（因此不会引入额外的[MASK]标记）。PERT的学习目标是预测原token所在的位置，具体见下例。
 
@@ -59,18 +61,19 @@
 
 这里主要提供TensorFlow 1.15版本的模型权重。如需PyTorch或者TensorFlow2版本的模型，请看下一小节。
 
+**开源版本仅包含Transformer部分的权重，可直接用于下游任务精调，或者其他预训练模型二次预训练的初始权重，更多说明见FAQ。**
+
 * **`PERT-large`**：24-layer, 1024-hidden, 16-heads, 330M parameters
 * **`PERT-base`** 12-layer, 768-hidden, 12-heads, 110M parameters
 
-| 模型简称                 | 语种 |          语料           | Google下载 | 百度盘下载 |
-| :----------------------- | :--: | :---------------------: | :--------: | :--------: |
-| **`Chinese-PERT-large`** | 中文 |  EXT数据<sup>[1]</sup>  |     -      |     -      |
-| **`Chinese-PERT-base`**  | 中文 |  EXT数据<sup>[1]</sup>  |     -      |     -      |
-| **`English-PERT-large`** | 英文 | WikiBooks<sup>[2]</sup> |     -      |     -      |
-| **`English-PERT-base`**  | 英文 | WikiBooks<sup>[2]</sup> |     -      |     -      |
+| 模型简称                           | 语种 |          语料           | Google下载 |                          百度盘下载                          |
+| :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: |
+| **`Chinese-PERT-large`**           | 中文 |  EXT数据<sup>[1]</sup>  |   [TBA]    | [TensorFlow（密码：e9hs）](https://pan.baidu.com/s/1MG44TRIgqV6m_StfB_yBqQ?pwd=e9hs) |
+| **`Chinese-PERT-base`**            | 中文 |  EXT数据<sup>[1]</sup>  |   [TBA]    | [TensorFlow（密码：rcsw）](https://pan.baidu.com/s/1yDHkYKmdaJkliTGHWQtdFA?pwd=rcsw) |
+| **`English-PERT-large`** (uncased) | 英文 | WikiBooks<sup>[2]</sup> |   [TBA]    | [TensorFlow（密码：wxwi）](https://pan.baidu.com/s/1h62V5y_XH6VqlD820KnkFw?pwd=wxwi) |
+| **`English-PERT-base`** (uncased)  | 英文 | WikiBooks<sup>[2]</sup> |   [TBA]    | [TensorFlow（密码：8jgq）](https://pan.baidu.com/s/1fX4Epbgk8rR49A0xIAEWDw?pwd=8jgq) |
 
-> [1] EXT数据包括：中文维基百科，其他百科、新闻、问答等数据，总词数达5.4B，约占用20G磁盘空间，与MacBERT相同。
->
+> [1] EXT数据包括：中文维基百科，其他百科、新闻、问答等数据，总词数达5.4B，约占用20G磁盘空间，与MacBERT相同。  
 > [2] Wikipedia + BookCorpus
 
 以TensorFlow版`Chinese-PERT-base`为例，下载完毕后对zip文件进行解压得到：
@@ -84,7 +87,7 @@ chinese_pert_base_L-12_H-768_A-12.zip
     |- vocab.txt            # 词表（与谷歌原版一致）
 ```
 
-其中`bert_config.json`和`vocab.txt`与谷歌原版`BERT-base, Chinese`完全一致。
+其中`bert_config.json`和`vocab.txt`与谷歌原版`BERT-base, Chinese`完全一致（英文版与BERT-uncased版本一致）。
 
 #### PyTorch以及TensorFlow 2版本
 
@@ -118,7 +121,16 @@ TBA
 
 
 ## FAQ
-TBA
+**Q1: 关于PERT的开源版本权重**  
+A1: 开源版本仅包含Transformer部分的权重，可直接用于下游任务精调，或者其他预训练模型二次预训练的初始权重。原始TF版本权重可能包含**随机初始化**的MLM权重。这是为了：
+
+- 删去不必要的Adam相关权重（大约会减小至1/3）；
+- 与transformers的BERT模型转换一致（此过程会使用原版BERT结构，因此预训练任务部分的权重会丢失，并保留BERT的MLM随机初始化权重）。
+
+**Q2: 关于PERT在下游任务上的效果**  
+A2: 目前还在完善技术报告，初步结论是在阅读理解、序列标注等任务上效果较好，但在文本分类任务上效果较差。具体效果请各位在各自任务上自行尝试。
+
+
 
 
 ## 引用
