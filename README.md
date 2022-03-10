@@ -55,9 +55,7 @@
 
 以下是PERT模型的基本结构和输入输出格式。
 
-![pert](./pics/pert.png)
-
-
+![pert](https://github.com/ymcui/PERT/blob/main/pics/pert.png)
 
 ## 模型下载
 

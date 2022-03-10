@@ -36,14 +36,14 @@ View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 2022/2/17 Thank you for your attention to this project. It is expected that the model will be issued next week, and the technical report will be issued after it is improved.
 
 ## Content guide
-| Chapter                                            | Description                                                  |
-| -------------------------------------------------- | ------------------------------------------------------------ |
-| [Introduction](#Introduction)                      | The basic principle of PERT pre-training model               |
-| [Model download](#Model download)                  | Download address of PERT pre-training model                  |
-| [QuickLoad](#QuickLoad)                            | How to use [🤗Transformers](https://github.com/huggingface/transformers) to quickly load models |
-| [Baseline system effect] (#Baseline system effect) | Baseline system effect on some NLU tasks                     |
-| [FAQ](#FAQ)                                        | Frequently Asked Questions                                   |
-| [quote](#quote)                                    | Technical report of this project                             |
+| Chapter                                                      | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Introduction](#Introduction)                                | The basic principle of PERT pre-training model               |
+| [Model download](#Model download)                            | Download address of PERT pre-training model                  |
+| [QuickLoad](#QuickLoad)                                      | How to use [🤗Transformers](https://github.com/huggingface/transformers) to quickly load models |
+| [Baseline system performance] (#Baseline system performance) | Baseline system effect on some NLU tasks                     |
+| [FAQ](#FAQ)                                                  | Frequently Asked Questions                                   |
+| [quote](#quote)                                              | Technical report of this project                             |
 
 
 ## Introduction
@@ -63,7 +63,7 @@ General idea: PERT performs a certain word order transposition on the original i
 
 The following is the basic structure and input and output format of the PERT model.
 
-![pert](./pics/pert.png)
+![pert](https://github.com/ymcui/PERT/blob/main/pics/pert.png)
 
 ## Model download
 
