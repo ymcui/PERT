@@ -10,7 +10,7 @@
         <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/PERT.svg?color=blue&style=flat-square">
     </a>
 </p>
-在自然语言处理领域中，预训练语言模型（Pre-trained Language Models，PLMs）已成为非常重要的基础技术。在近两年，哈工大讯飞联合实验室发布了多种中文预训练模型资源以及相关配套工具。作为相关工作的延续，在本项目中，我们提出了一种基于乱序语言模型的预训练模型（PERT），在不引入掩码标记[MASK]的情况下自监督地学习文本语义信息。PERT在部分中英文NLU任务上获得性能提升，但也在部分任务上效果较差，请酌情使用。目前提供了中文和英文的PERT模型，包含两种模型大小（base、large）。 
+在自然语言处理领域中，预训练语言模型（Pre-trained Language Models，PLMs）已成为非常重要的基础技术。在近两年，哈工大讯飞联合实验室发布了多种中文预训练模型资源以及相关配套工具。作为相关工作的延续，在本项目中，我们提出了一种基于乱序语言模型的预训练模型（PERT），在不引入掩码标记[MASK]的情况下自监督地学习文本语义信息。PERT在部分中英文NLU任务上获得性能提升，但也在部分任务上效果较差，请酌情使用。目前提供了中文和英文的PERT模型，包含两种模型大小（base、large）。     
 
 
 - **PERT: Pre-Training BERT with Permuted Language Model（待后续上传）**   
@@ -23,7 +23,7 @@
 查看更多哈工大讯飞联合实验室（HFL）发布的资源：https://github.com/ymcui/HFL-Anthology
 
 ## 新闻
-**2022/2/24 中文、英文的PERT-base和PERT-large已发布。可直接使用BERT结构加载并进行下游任务精调。技术报告待完善后发出，时间待定。**
+**2022/2/24 中文、英文的PERT-base和PERT-large已发布。可直接使用BERT结构加载并进行下游任务精调。技术报告待完善后发出，时间预计在3月中旬，感谢耐心等待。**
 
 2022/2/17   感谢对本项目的关注，预计下周发出模型，技术报告待完善后发出。
 
@@ -53,8 +53,11 @@
 | BERT            | 研 究 表 明 这 一 句 **[MASK]** 的 顺 **[MASK]** 并 不 **[MASK]** 响 阅 读 。 | 位置7 → 话<br/>位置10 → 序<br/>位置13 → 影                   |
 | PERT            | 研 究 **明** **表** 这 一 句 话 的 顺 序 并 不 **响** **影** 阅 读 。 | 位置2（明）→位置3（表）<br/>位置3（表）→位置2（明）<br/>位置13（响）→位置14（影）<br/>位置14（影）→位置13（响） |
 
+以下是PERT模型的基本结构和输入输出格式。
 
-更详细的算法细节待后续补充说明。
+![pert](/Users/kevin/Develop/github/PERT/pics/pert.png)
+
+
 
 ## 模型下载
 
@@ -103,8 +106,6 @@ chinese_pert_base_L-12_H-768_A-12.zip
 | **English-PERT-large** | 1.2G | https://huggingface.co/hfl/english-pert-large |
 | **English-PERT-base** | 0.4G | https://huggingface.co/hfl/english-pert-base |
 
-
-
 ## 快速加载
 由于PERT主体部分仍然是BERT结构，用户可以使用[transformers库](https://github.com/huggingface/transformers)轻松调用PERT模型。
 
@@ -140,10 +141,12 @@ A1: 开源版本仅包含Transformer部分的权重，可直接用于下游任�
 A2: 目前还在完善技术报告，初步结论是在阅读理解、序列标注等任务上效果较好，但在文本分类任务上效果较差。具体效果请各位在各自任务上自行尝试。
 
 
-
-
 ## 引用
+```tex
 TBA
+```
+
+
 
 
 ## 关注我们
