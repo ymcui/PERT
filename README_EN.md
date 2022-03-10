@@ -63,7 +63,7 @@ General idea: PERT performs a certain word order transposition on the original i
 
 The following is the basic structure and input and output format of the PERT model.
 
-![pert](/Users/kevin/Develop/github/PERT/pics/pert.png)
+![pert](./pics/pert.png)
 
 ## Model download
 

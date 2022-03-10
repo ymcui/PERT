@@ -55,7 +55,7 @@
 
 以下是PERT模型的基本结构和输入输出格式。
 
-![pert](/Users/kevin/Develop/github/PERT/pics/pert.png)
+![pert](./pics/pert.png)
 
 
 
