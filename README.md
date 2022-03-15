@@ -10,11 +10,12 @@
         <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/PERT.svg?color=blue&style=flat-square">
     </a>
 </p>
+
 在自然语言处理领域中，预训练语言模型（Pre-trained Language Models，PLMs）已成为非常重要的基础技术。在近两年，哈工大讯飞联合实验室发布了多种中文预训练模型资源以及相关配套工具。作为相关工作的延续，在本项目中，我们提出了一种基于乱序语言模型的预训练模型（PERT），在不引入掩码标记[MASK]的情况下自监督地学习文本语义信息。PERT在部分中英文NLU任务上获得性能提升，但也在部分任务上效果较差，请酌情使用。目前提供了中文和英文的PERT模型，包含两种模型大小（base、large）。     
 
 
-- **PERT: Pre-Training BERT with Permuted Language Model（待后续上传）**   
-- *Yiming Cui, Ziqing Yang, Ting Liu, Zhigang Chen*
+- [**PERT: Pre-Training BERT with Permuted Language Model**](https://arxiv.org/abs/2203.06906)
+- *Yiming Cui, Ziqing Yang, Ting Liu*
 
 ----
 
@@ -23,7 +24,9 @@
 查看更多哈工大讯飞联合实验室（HFL）发布的资源：https://github.com/ymcui/HFL-Anthology
 
 ## 新闻
-**2022/2/24 中文、英文的PERT-base和PERT-large已发布。可直接使用BERT结构加载并进行下游任务精调。技术报告待完善后发出，时间预计在3月中旬，感谢耐心等待。**
+**2022/3/15 技术报告已发布，请参考：**
+
+2022/2/24 中文、英文的PERT-base和PERT-large已发布。可直接使用BERT结构加载并进行下游任务精调。技术报告待完善后发出，时间预计在3月中旬，感谢耐心等待。
 
 2022/2/17   感谢对本项目的关注，预计下周发出模型，技术报告待完善后发出。
 
@@ -33,7 +36,7 @@
 | [简介](#简介)                         | PERT预训练模型的基本原理                                       |
 | [模型下载](#模型下载)         | PERT预训练模型的下载地址                               |
 | [快速加载](#快速加载)                 | 如何使用[🤗Transformers](https://github.com/huggingface/transformers)快速加载模型 |
-| [基线系统效果](#基线系统效果) | 在部分NLU任务上的基线系统效果                                |
+| [基线系统效果](#基线系统效果) | 在部分中英文NLU任务上的基线系统效果                             |
 | [FAQ](#FAQ)                           | 常见问题答疑                                                 |
 | [引用](#引用)                         | 本项目的技术报告                                          |
 
@@ -53,7 +56,7 @@
 | BERT            | 研 究 表 明 这 一 句 **[MASK]** 的 顺 **[MASK]** 并 不 **[MASK]** 响 阅 读 。 | 位置7 → 话<br/>位置10 → 序<br/>位置13 → 影                   |
 | PERT            | 研 究 **明** **表** 这 一 句 话 的 顺 序 并 不 **响** **影** 阅 读 。 | 位置2（明）→位置3（表）<br/>位置3（表）→位置2（明）<br/>位置13（响）→位置14（影）<br/>位置14（影）→位置13（响） |
 
-以下是PERT模型的基本结构和输入输出格式。
+以下是PERT模型**在预训练阶段**的基本结构和输入输出格式。
 
 ![pert](https://github.com/ymcui/PERT/blob/main/pics/pert.png)
 
@@ -125,7 +128,46 @@ model = BertModel.from_pretrained("MODEL_NAME")
 | English-PERT-base  | hfl/english-pert-base  |
 
 ## 基线系统效果
-TBA
+以下仅列举部分实验结果。详细结果和分析见论文。实验结果表格中，括号外为最大值，括号内为平均值。
+
+### 中文任务
+
+在以下10个任务上进行了效果测试。
+
+- **抽取式阅读理解**（2）：[CMRC 2018（简体中文）](https://github.com/ymcui/cmrc2018)、[DRCD（繁体中文）](https://github.com/DRCKnowledgeTeam/DRCD)
+- **文本分类**（6）：
+  - **单句**（2）：[ChnSentiCorp](https://github.com/pengming617/bert_classification)、[TNEWS](https://github.com/CLUEbenchmark/CLUE)
+  - **句对**（4）：[XNLI](https://github.com/google-research/bert/blob/master/multilingual.md)、[LCQMC](http://icrc.hitsz.edu.cn/info/1037/1146.htm)、[BQ Corpus](http://icrc.hitsz.edu.cn/Article/show/175.html)、[OCNLI](https://github.com/CLUEbenchmark/OCNLI)
+- **命名实体识别**（2）：[MSRA-NER]()、[People's Daily（人民日报）]()
+
+#### 阅读理解
+
+![chinese-mrc](./pics/chinese-mrc.png)
+
+#### 文本分类
+
+![chinese-tc](./pics/chinese-tc.png)
+
+#### 命名实体识别
+
+![chinese-ner](./pics/chinese-ner.png)
+
+#### 文本纠错（乱序）
+
+除了上述任务之外，我们还在文本纠错中的乱序任务上进行了测试，效果如下。
+
+![chinese-wor](./pics/chinese-wor.png)
+
+### 英文任务
+
+在以下6个任务上进行了效果测试。
+
+- **抽取式阅读理解**（2）：[SQuAD 1.1](https://rajpurkar.github.io/SQuAD-explorer/)、[SQuAD 2.0](https://rajpurkar.github.io/SQuAD-explorer/)
+- **GLUE子任务**（4）：[MNLI、SST-2、CoLA、MRPC](http://gluebenchmark.com)
+
+![english-nlu](./pics/english-nlu.png)
+
+
 
 
 ## FAQ
@@ -141,10 +183,15 @@ A2: 目前还在完善技术报告，初步结论是在阅读理解、序列标�
 
 ## 引用
 ```tex
-TBA
+@article{cui2022pert,
+      title={PERT: Pre-training BERT with Permuted Language Model}, 
+      author={Cui, Yiming and Yang, Ziqing and Liu, Ting},
+      year={2022},
+      eprint={2203.06906},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
-
-
 
 
 ## 关注我们
