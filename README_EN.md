@@ -14,15 +14,17 @@ Please read our [Chinese README](https://github.com/ymcui/PERT/) at the moment, 
 
 Thank you for your understanding.
 
-## The followings are MACHINE TRANSLATED (by Google Translator) English README.md. We will update this later.
+## The main content for this README.md is MACHINE TRANSLATED (by Google Translator). We will update this later.
+
+## Please check our paper: https://arxiv.org/abs/2203.06906
 
 -----
 
 In the field of natural language processing, pre-trained language models (PLMs) have become a very important basic technology. In the past two years, the Joint Laboratory of HIT and iFLYTEK Research (HFL) has released a variety of Chinese pre-training model resources and related supporting tools. As a continuation of related work, in this project, we propose a pre-trained model (PERT) based on an out-of-order language model to learn text semantic information self-supervised without introducing mask tokens [MASK]. PERT has improved performance on some Chinese and English NLU tasks, but it is also less effective on some tasks, please use it as appropriate. Currently, PERT models in Chinese and English are provided, including two model sizes (base, large).
 
 
-- **PERT: Pre-Training BERT with Permuted Language Model (to be uploaded later)**
-- *Yiming Cui, Ziqing Yang, Ting Liu, Zhigang Chen*
+- [**PERT: Pre-Training BERT with Permuted Language Model**](https://arxiv.org/abs/2203.06906)
+- *Yiming Cui, Ziqing Yang, Ting Liu*
 
 ----
 
@@ -31,19 +33,21 @@ In the field of natural language processing, pre-trained language models (PLMs) 
 View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 
 ## news
-**2022/2/24 Chinese and English PERT-base and PERT-large have been released. The BERT structure can be directly loaded and fine-tuned for downstream tasks. The technical report will be issued after it is perfected. The time is expected to be in mid-March. Thank you for your patience. **
+**2022/3/15 Our preliminary technical report is available: https://arxiv.org/abs/2203.06906**
+
+2022/2/24 Chinese and English PERT-base and PERT-large have been released. The BERT structure can be directly loaded and fine-tuned for downstream tasks. The technical report will be issued after it is perfected. The time is expected to be in mid-March. Thank you for your patience. 
 
 2022/2/17 Thank you for your attention to this project. It is expected that the model will be issued next week, and the technical report will be issued after it is improved.
 
 ## Content guide
-| Chapter                                                      | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Introduction](#Introduction)                                | The basic principle of PERT pre-training model               |
-| [Model download](#Model download)                            | Download address of PERT pre-training model                  |
-| [QuickLoad](#QuickLoad)                                      | How to use [🤗Transformers](https://github.com/huggingface/transformers) to quickly load models |
-| [Baseline system performance] (#Baseline system performance) | Baseline system effect on some NLU tasks                     |
-| [FAQ](#FAQ)                                                  | Frequently Asked Questions                                   |
-| [quote](#quote)                                              | Technical report of this project                             |
+| Chapter                                                     | Description                                                  |
+| ----------------------------------------------------------- | ------------------------------------------------------------ |
+| [Introduction](#Introduction)                               | The basic principle of PERT pre-training model               |
+| [Model download](#Model download)                           | Download address of PERT pre-training model                  |
+| [QuickLoad](#QuickLoad)                                     | How to use [🤗Transformers](https://github.com/huggingface/transformers) to quickly load models |
+| [Baseline system performance](#Baseline-system-performance) | Baseline system effect on some NLU tasks                     |
+| [FAQ](#FAQ)                                                 | Frequently Asked Questions                                   |
+| [Citation](#Citation)                                       | Technical report of this project                             |
 
 
 ## Introduction
@@ -133,7 +137,7 @@ The corresponding list of `MODEL_NAME` is as follows:
 | English-PERT-base  | hfl/english-pert-base  |
 
 ## Baseline system performance
-TBA
+Please see our technical report at the moment. see: https://arxiv.org/abs/2203.06906
 
 
 ## FAQ
@@ -147,12 +151,17 @@ A1: The open source version only contains the weights of the Transformer part, w
 A2: At present, the technical report is still being improved. The preliminary conclusion is that the effect is better in tasks such as reading comprehension and sequence labeling, but the effect is poor in text classification tasks. Please try the specific effects on your own tasks.
 
 
-## Quote
+## Citation
 ````tex
-TBA
+@article{cui2022pert,
+      title={PERT: Pre-training BERT with Permuted Language Model}, 
+      author={Cui, Yiming and Yang, Ziqing and Liu, Ting},
+      year={2022},
+      eprint={2203.06906},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ````
-
-
 
 
 ## Follow us
