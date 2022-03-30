@@ -178,10 +178,11 @@ A1: 开源版本仅包含Transformer部分的权重，可直接用于下游任�
 - 与transformers的BERT模型转换一致（此过程会使用原版BERT结构，因此预训练任务部分的权重会丢失，并保留BERT的MLM随机初始化权重）。
 
 **Q2: 关于PERT在下游任务上的效果**  
-A2: 目前还在完善技术报告，初步结论是在阅读理解、序列标注等任务上效果较好，但在文本分类任务上效果较差。具体效果请各位在各自任务上自行尝试。
+A2: 初步结论是在阅读理解、序列标注等任务上效果较好，但在文本分类任务上效果较差。具体效果请各位在各自任务上自行尝试。具体细节请参考我们的论文：https://arxiv.org/abs/2203.06906
 
 
 ## 引用
+如果本项目中的模型或者相关结论有助于您的研究，请引用以下文章：https://arxiv.org/abs/2203.06906
 ```tex
 @article{cui2022pert,
       title={PERT: Pre-training BERT with Permuted Language Model}, 
