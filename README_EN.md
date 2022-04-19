@@ -55,17 +55,17 @@ General idea: PERT utilizes permuted text as the input  (so no [MASK] tokens are
 
 The model weights of TensorFlow 1.15 are mainly provided here. For models in PyTorch or TensorFlow2, see the next section.
 
-**The open source version only contains the weights of the Transformer part, which can be directly used for fine-tuning of downstream tasks. Also you can further pre-train this model with any pre-training objective as long as it uses traditional transformer architecture as the main body. For more instructions, see FAQ. **
+**The open source version only contains the weights of the Transformer part, which can be directly used for fine-tuning of downstream tasks. Also you can further pre-train this model with any pre-training objective as long as it uses traditional transformer architecture as the main body. For more instructions, see FAQ.**
 
 * **`PERT-large`**: 24-layer, 1024-hidden, 16-heads, 330M parameters
 * **`PERT-base`** 12-layer, 768-hidden, 12-heads, 110M parameters
 
 | Model                            | Language |         Corpus          |                       Google Download                        | Baidu Disk Download                                          |
 | :------------------------------- | :------: | :---------------------: | :----------------------------------------------------------: | ------------------------------------------------------------ |
-| **Chinese-PERT-large**           | Chinese  | EXT data <sup>[1]</sup> | [TensorFlow](https://drive.google.com/file/d/1jAV2IbJEHErVpl6mPceLjSEQl6osQ0uk/view?usp= sharing) | [TensorFlow (password: e9hs)](https://pan.baidu.com/s/1MG44TRIgqV6m_StfB_yBqQ?pwd=e9hs) |
-| **Chinese-PERT-base**            | Chinese  | EXT data <sup>[1]</sup> | [TensorFlow](https://drive.google.com/file/d/1_3TYwubupTfL-pgb2seqvF1qgD5SRGrz/view? usp=sharing) | [TensorFlow (password: rcsw)](https://pan.baidu.com/s/1yDHkYKmdaJkliTGHWQtdFA?pwd=rcsw) |
-| **English-PERT-large** (uncased) | English  | WikiBooks<sup>[2]</sup> | [TensorFlow](https://drive.google.com/file/d/1WXpMTCqB9Cf0jXQPiNAsyssTRDtPCHjU/view? usp=sharing) | [TensorFlow (password: wxwi)](https://pan.baidu.com/s/1h62V5y_XH6VqlD820KnkFw?pwd=wxwi) |
-| **English-PERT-base** (uncased)  | English  | WikiBooks<sup>[2]</sup> | [TensorFlow](https://drive.google.com/file/d/1rJng61FlRveqXyHKXlxu1g9YTYi24N55/view? usp=sharing) | [TensorFlow (password: 8jgq)](https://pan.baidu.com/s/1fX4Epbgk8rR49A0xIAEWDw?pwd=8jgq) |
+| **Chinese-PERT-large**           | Chinese  | EXT data <sup>[1]</sup> | [TensorFlow](https://drive.google.com/file/d/1jAV2IbJEHErVpl6mPceLjSEQl6osQ0uk/view?usp=sharing) | [TensorFlow (password: e9hs)](https://pan.baidu.com/s/1MG44TRIgqV6m_StfB_yBqQ?pwd=e9hs) |
+| **Chinese-PERT-base**            | Chinese  | EXT data <sup>[1]</sup> | [TensorFlow](https://drive.google.com/file/d/1_3TYwubupTfL-pgb2seqvF1qgD5SRGrz/view?usp=sharing) | [TensorFlow (password: rcsw)](https://pan.baidu.com/s/1yDHkYKmdaJkliTGHWQtdFA?pwd=rcsw) |
+| **English-PERT-large** (uncased) | English  | WikiBooks<sup>[2]</sup> | [TensorFlow](https://drive.google.com/file/d/1WXpMTCqB9Cf0jXQPiNAsyssTRDtPCHjU/view?usp=sharing) | [TensorFlow (password: wxwi)](https://pan.baidu.com/s/1h62V5y_XH6VqlD820KnkFw?pwd=wxwi) |
+| **English-PERT-base** (uncased)  | English  | WikiBooks<sup>[2]</sup> | [TensorFlow](https://drive.google.com/file/d/1rJng61FlRveqXyHKXlxu1g9YTYi24N55/view?usp=sharing) | [TensorFlow (password: 8jgq)](https://pan.baidu.com/s/1fX4Epbgk8rR49A0xIAEWDw?pwd=8jgq) |
 
 > [1] EXT data includes: Chinese Wikipedia, encyclopedias, news, question answering web, etc. The total number of words is 5.4B, taking about 20G of disk space, which is the same as MacBERT.
 > [2] Wikipedia + BookCorpus
@@ -160,13 +160,13 @@ We perform experiments on the following six English tasks.
 
 
 ## FAQ
-**Q1: About the open-source version of PERT**
+**Q1: About the open-source version of PERT**  
 A1: The open source version only contains the weights of the Transformer part, which can be directly used for fine-tuning of downstream tasks, or for the initialization of re-pre-training for other models. The original TF version weights may contain **randomly initialized** MLM weights (Please do not try to use these part). There are two reasons:
 
 - To remove unnecessary Adam-related weights (the model size will be shrinked to its 1/3);
 - Consistent with the BERT model conversion of transformers (this process will use the original BERT structure, so the weights of the pre-training task part will be lost, and the MLM random initialization weights of BERT will be retained).
 
-**Q2: About the effect of PERT on downstream tasks**
+**Q2: About the effect of PERT on downstream tasks**  
 A2: The preliminary conclusion is that the effect is better in tasks such as reading comprehension and sequence labeling, but the effect is poor in text classification tasks. Please try the specific effects on your own tasks. For more information, please read our paper: https://arxiv.org/abs/2203.06906
 
 ## Citation
