@@ -23,11 +23,13 @@ Pre-trained language models (PLMs) have become an important technique in natural
 View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 
 ## News
-**2022/3/15 Our preliminary technical report is available on arXiv: https://arxiv.org/abs/2203.06906**
+**May 17, 2022 We release the PERT models that were finetuned on machine reading comprehension data with interactive demos, check: [Download](#Download)**
 
-2022/2/24 Chinese and English PERT-base and PERT-large have been released. The BERT structure can be directly loaded and fine-tuned for downstream tasks. The technical report will be issued after it is perfected. The time is expected to be in mid-March. Thank you for your patience. 
+Mar 15, 2022 Our preliminary technical report is available on arXiv: https://arxiv.org/abs/2203.06906
 
-2022/2/17 Thank you for your attention to this project. It is expected that the model will be issued next week, and the technical report will be issued after it is improved.
+Feb 24, 2022 Chinese and English PERT-base and PERT-large have been released. The BERT structure can be directly loaded and fine-tuned for downstream tasks. The technical report will be issued after it is perfected. The time is expected to be in mid-March. Thank you for your patience. 
+
+Feb 17, 2022 Thank you for your attention to this project. It is expected that the model will be issued next week, and the technical report will be issued after it is improved.
 
 ## Table of Contents
 | Chapter                                       | Description                                                  |
@@ -93,13 +95,15 @@ Download method: Click on any model to be downloaded → select the "Files and v
 | :--------------------- | :-------------: | :-------------------------------------------: |
 | **Chinese-PERT-large** |      1.2G       | https://huggingface.co/hfl/chinese-pert-large |
 | **Chinese-PERT-base**  |      0.4G       | https://huggingface.co/hfl/chinese-pert-base  |
+| **Chinese-PERT-large-MRC** | 1.2G | https://huggingface.co/hfl/chinese-pert-large-mrc |
+| **Chinese-PERT-base-MRC** | 0.4G | https://huggingface.co/hfl/chinese-pert-base-mrc |
 | **English-PERT-large** |      1.2G       | https://huggingface.co/hfl/english-pert-large |
 | **English-PERT-base**  |      0.4G       | https://huggingface.co/hfl/english-pert-base  |
 
 ## Quick Load
 Since the main body of PERT is still the same as the BERT structure, users can easily call the PERT model using the [transformers library](https://github.com/huggingface/transformers).
 
-**Note: All PERT models in this project should be loaded by using BertTokenizer and BertModel. **
+**Note: All PERT models in this project should be loaded by using BertTokenizer and BertModel (BertForQuestionAnswering for MRC models). **
 
 ````python
 from transformers import BertTokenizer, BertModel
@@ -113,6 +117,8 @@ The list of `MODEL_NAME` is as follows:
 | ------------------ | ---------------------- |
 | Chinese-PERT-large | hfl/chinese-pert-large |
 | Chinese-PERT-base  | hfl/chinese-pert-base  |
+| Chinese-PERT-large-MRC | hfl/chinese-pert-large-mrc |
+| Chinese-PERT-base-MRC  | hfl/chinese-pert-base-mrc  |
 | English-PERT-large | hfl/english-pert-large |
 | English-PERT-base  | hfl/english-pert-base  |
 

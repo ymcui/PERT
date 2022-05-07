@@ -24,7 +24,9 @@
 查看更多哈工大讯飞联合实验室（HFL）发布的资源：https://github.com/ymcui/HFL-Anthology
 
 ## 新闻
-**2022/3/15 技术报告已发布，请参考：https://arxiv.org/abs/2203.06906**
+**2022/5/7 更新了在多个阅读理解数据集上精调的阅读理解专用PERT，并提供了huggingface在线交互Demo，check：[模型下载](#模型下载)** 
+
+2022/3/15 技术报告已发布，请参考：https://arxiv.org/abs/2203.06906
 
 2022/2/24 中文、英文的PERT-base和PERT-large已发布。可直接使用BERT结构加载并进行下游任务精调。技术报告待完善后发出，时间预计在3月中旬，感谢耐心等待。
 
@@ -101,16 +103,18 @@ chinese_pert_base_L-12_H-768_A-12.zip
 下载方法：点击任意需要下载的模型 → 选择"Files and versions"选项卡 → 下载对应的模型文件。
 
 | 模型简称 | 模型文件大小 | transformers模型库地址 |
-| :------- | :---------: |  :---------: |
+| :------- | :---------: |  :---------- |
 | **Chinese-PERT-large** | 1.2G | https://huggingface.co/hfl/chinese-pert-large |
 | **Chinese-PERT-base** | 0.4G | https://huggingface.co/hfl/chinese-pert-base |
+| **Chinese-PERT-large-MRC** | 1.2G | https://huggingface.co/hfl/chinese-pert-large-mrc |
+| **Chinese-PERT-base-MRC** | 0.4G | https://huggingface.co/hfl/chinese-pert-base-mrc |
 | **English-PERT-large** | 1.2G | https://huggingface.co/hfl/english-pert-large |
 | **English-PERT-base** | 0.4G | https://huggingface.co/hfl/english-pert-base |
 
 ## 快速加载
 由于PERT主体部分仍然是BERT结构，用户可以使用[transformers库](https://github.com/huggingface/transformers)轻松调用PERT模型。
 
-**注意：本目录中的所有模型均使用BertTokenizer以及BertModel加载。**
+**注意：本目录中的所有模型均使用BertTokenizer以及BertModel加载（MRC模型使用BertForQuestionAnswering）。**
 
 ```python
 from transformers import BertTokenizer, BertModel
@@ -120,12 +124,14 @@ model = BertModel.from_pretrained("MODEL_NAME")
 ```
 其中`MODEL_NAME`对应列表如下：
 
-| 模型名             | MODEL_NAME             |
-| ------------------ | ---------------------- |
-| Chinese-PERT-large | hfl/chinese-pert-large |
-| Chinese-PERT-base  | hfl/chinese-pert-base  |
-| English-PERT-large | hfl/english-pert-large |
-| English-PERT-base  | hfl/english-pert-base  |
+| 模型名                 | MODEL_NAME                 |
+| ---------------------- | -------------------------- |
+| Chinese-PERT-large     | hfl/chinese-pert-large     |
+| Chinese-PERT-base      | hfl/chinese-pert-base      |
+| Chinese-PERT-large-MRC | hfl/chinese-pert-large-mrc |
+| Chinese-PERT-base-MRC  | hfl/chinese-pert-base-mrc  |
+| English-PERT-large     | hfl/english-pert-large     |
+| English-PERT-base      | hfl/english-pert-base      |
 
 ## 基线系统效果
 以下仅列举部分实验结果。详细结果和分析见论文。实验结果表格中，括号外为最大值，括号内为平均值。
