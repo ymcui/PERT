@@ -18,12 +18,14 @@ Pre-trained language models (PLMs) have become an important technique in natural
 
 ----
 
-[Chinese MacBERT](https://github.com/ymcui/MacBERT) | [Chinese ELECTRA](https://github.com/ymcui/Chinese-ELECTRA) | [Chinese XLNet](https://github.com/ymcui/Chinese-XLNet) | [Chinese BERT](https://github.com/ymcui/Chinese-BERT-wwm) | [TextBrewer](https://github.com/airaria/TextBrewer) | [TextPruner](https://github.com/airaria/TextPruner)
+[Chinese LERT](https://github.com/ymcui/LERT) | [Chinese/English PERT](https://github.com/ymcui/PERT) [Chinese MacBERT](https://github.com/ymcui/MacBERT) | [Chinese ELECTRA](https://github.com/ymcui/Chinese-ELECTRA) | [Chinese XLNet](https://github.com/ymcui/Chinese-XLNet) | [Chinese BERT](https://github.com/ymcui/Chinese-BERT-wwm) | [TextBrewer](https://github.com/airaria/TextBrewer) | [TextPruner](https://github.com/airaria/TextPruner)
 
 View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 
 ## News
-**May 17, 2022 We release the PERT models that were finetuned on machine reading comprehension data with interactive demos, check: [Download](#Download)**
+<b>2022/10/29 We release a new pre-trained model called LERT, check https://github.com/ymcui/LERT/</b>
+
+May 17, 2022 We release the PERT models that were finetuned on machine reading comprehension data with interactive demos, check: [Download](#Download)
 
 Mar 15, 2022 Our preliminary technical report is available on arXiv: https://arxiv.org/abs/2203.06906
 

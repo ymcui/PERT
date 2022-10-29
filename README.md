@@ -19,12 +19,14 @@
 
 ----
 
-[中文MacBERT](https://github.com/ymcui/MacBERT) | [中文ELECTRA](https://github.com/ymcui/Chinese-ELECTRA) | [中文XLNet](https://github.com/ymcui/Chinese-XLNet) | [中文BERT](https://github.com/ymcui/Chinese-BERT-wwm) |  [知识蒸馏工具TextBrewer](https://github.com/airaria/TextBrewer) | [模型裁剪工具TextPruner](https://github.com/airaria/TextPruner)
+[中文LERT](https://github.com/ymcui/LERT) | [中英文PERT](https://github.com/ymcui/PERT) | [中文MacBERT](https://github.com/ymcui/MacBERT) | [中文ELECTRA](https://github.com/ymcui/Chinese-ELECTRA) | [中文XLNet](https://github.com/ymcui/Chinese-XLNet) | [中文BERT](https://github.com/ymcui/Chinese-BERT-wwm) | [知识蒸馏工具TextBrewer](https://github.com/airaria/TextBrewer) | [模型裁剪工具TextPruner](https://github.com/airaria/TextPruner)
 
 查看更多哈工大讯飞联合实验室（HFL）发布的资源：https://github.com/ymcui/HFL-Anthology
 
 ## 新闻
-**2022/5/7 更新了在多个阅读理解数据集上精调的阅读理解专用PERT，并提供了huggingface在线交互Demo，check：[模型下载](#模型下载)** 
+**2022/10/29 我们提出了一种融合语言学信息的预训练模型LERT。查看：https://github.com/ymcui/LERT**
+
+2022/5/7 更新了在多个阅读理解数据集上精调的阅读理解专用PERT，并提供了huggingface在线交互Demo，check：[模型下载](#模型下载)
 
 2022/3/15 技术报告已发布，请参考：https://arxiv.org/abs/2203.06906
 
