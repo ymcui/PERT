@@ -23,7 +23,9 @@ Pre-trained language models (PLMs) have become an important technique in natural
 View more resources released by HFL: https://github.com/ymcui/HFL-Anthology
 
 ## News
-<b>2022/10/29 We release a new pre-trained model called LERT, check https://github.com/ymcui/LERT/</b>
+**Mar 28, 2023 We open-sourced Chinese LLaMA&Alpaca LLMs, which can be quickly deployed on PC. Check: https://github.com/ymcui/Chinese-LLaMA-Alpaca**
+
+2022/10/29 We release a new pre-trained model called LERT, check https://github.com/ymcui/LERT/
 
 May 17, 2022 We release the PERT models that were finetuned on machine reading comprehension data with interactive demos, check: [Download](#Download)
 
