@@ -66,12 +66,12 @@ The model weights of TensorFlow 1.15 are mainly provided here. For models in PyT
 * **`PERT-large`**: 24-layer, 1024-hidden, 16-heads, 330M parameters
 * **`PERT-base`** 12-layer, 768-hidden, 12-heads, 110M parameters
 
-| Model                            | Language |         Corpus          |                       Google Download                        | Baidu Disk Download                                          |
-| :------------------------------- | :------: | :---------------------: | :----------------------------------------------------------: | ------------------------------------------------------------ |
-| **Chinese-PERT-large**           | Chinese  | EXT data <sup>[1]</sup> | [TensorFlow](https://drive.google.com/file/d/1jAV2IbJEHErVpl6mPceLjSEQl6osQ0uk/view?usp=sharing) | [TensorFlow (password: e9hs)](https://pan.baidu.com/s/1MG44TRIgqV6m_StfB_yBqQ?pwd=e9hs) |
-| **Chinese-PERT-base**            | Chinese  | EXT data <sup>[1]</sup> | [TensorFlow](https://drive.google.com/file/d/1_3TYwubupTfL-pgb2seqvF1qgD5SRGrz/view?usp=sharing) | [TensorFlow (password: rcsw)](https://pan.baidu.com/s/1yDHkYKmdaJkliTGHWQtdFA?pwd=rcsw) |
-| **English-PERT-large** (uncased) | English  | WikiBooks<sup>[2]</sup> | [TensorFlow](https://drive.google.com/file/d/1WXpMTCqB9Cf0jXQPiNAsyssTRDtPCHjU/view?usp=sharing) | [TensorFlow (password: wxwi)](https://pan.baidu.com/s/1h62V5y_XH6VqlD820KnkFw?pwd=wxwi) |
-| **English-PERT-base** (uncased)  | English  | WikiBooks<sup>[2]</sup> | [TensorFlow](https://drive.google.com/file/d/1rJng61FlRveqXyHKXlxu1g9YTYi24N55/view?usp=sharing) | [TensorFlow (password: 8jgq)](https://pan.baidu.com/s/1fX4Epbgk8rR49A0xIAEWDw?pwd=8jgq) |
+| Model                            | Language |         Corpus          |                     Baidu Disk Download                      |
+| :------------------------------- | :------: | :---------------------: | :----------------------------------------------------------: |
+| **Chinese-PERT-large**           | Chinese  | EXT data <sup>[1]</sup> | [TensorFlow (password: e9hs)](https://pan.baidu.com/s/1MG44TRIgqV6m_StfB_yBqQ?pwd=e9hs) |
+| **Chinese-PERT-base**            | Chinese  | EXT data <sup>[1]</sup> | [TensorFlow (password: rcsw)](https://pan.baidu.com/s/1yDHkYKmdaJkliTGHWQtdFA?pwd=rcsw) |
+| **English-PERT-large** (uncased) | English  | WikiBooks<sup>[2]</sup> | [TensorFlow (password: wxwi)](https://pan.baidu.com/s/1h62V5y_XH6VqlD820KnkFw?pwd=wxwi) |
+| **English-PERT-base** (uncased)  | English  | WikiBooks<sup>[2]</sup> | [TensorFlow (password: 8jgq)](https://pan.baidu.com/s/1fX4Epbgk8rR49A0xIAEWDw?pwd=8jgq) |
 
 > [1] EXT data includes: Chinese Wikipedia, encyclopedias, news, question answering web, etc. The total number of words is 5.4B, taking about 20G of disk space, which is the same as MacBERT.
 > [2] Wikipedia + BookCorpus

@@ -77,12 +77,12 @@
 * **`PERT-large`**：24-layer, 1024-hidden, 16-heads, 330M parameters
 * **`PERT-base`** 12-layer, 768-hidden, 12-heads, 110M parameters
 
-| 模型简称                           | 语种 |          语料           | Google下载 |                          百度盘下载                          |
-| :--------------------------------- | :--: | :---------------------: | :--------: | :----------------------------------------------------------: |
-| **Chinese-PERT-large**           | 中文 |  EXT数据<sup>[1]</sup>  |   [TensorFlow](https://drive.google.com/file/d/1jAV2IbJEHErVpl6mPceLjSEQl6osQ0uk/view?usp=sharing)   | [TensorFlow（密码：e9hs）](https://pan.baidu.com/s/1MG44TRIgqV6m_StfB_yBqQ?pwd=e9hs) |
-| **Chinese-PERT-base**            | 中文 |  EXT数据<sup>[1]</sup>  |   [TensorFlow](https://drive.google.com/file/d/1_3TYwubupTfL-pgb2seqvF1qgD5SRGrz/view?usp=sharing)   | [TensorFlow（密码：rcsw）](https://pan.baidu.com/s/1yDHkYKmdaJkliTGHWQtdFA?pwd=rcsw) |
-| **English-PERT-large** (uncased) | 英文 | WikiBooks<sup>[2]</sup> |   [TensorFlow](https://drive.google.com/file/d/1WXpMTCqB9Cf0jXQPiNAsyssTRDtPCHjU/view?usp=sharing)   | [TensorFlow（密码：wxwi）](https://pan.baidu.com/s/1h62V5y_XH6VqlD820KnkFw?pwd=wxwi) |
-| **English-PERT-base** (uncased)  | 英文 | WikiBooks<sup>[2]</sup> |   [TensorFlow](https://drive.google.com/file/d/1rJng61FlRveqXyHKXlxu1g9YTYi24N55/view?usp=sharing)   | [TensorFlow（密码：8jgq）](https://pan.baidu.com/s/1fX4Epbgk8rR49A0xIAEWDw?pwd=8jgq) |
+| 模型简称                           | 语种 |          语料           |                          百度盘下载                          |
+| :--------------------------------- | :--: | :---------------------: | :----------------------------------------------------------: |
+| **Chinese-PERT-large**           | 中文 |  EXT数据<sup>[1]</sup>  | [TensorFlow（密码：e9hs）](https://pan.baidu.com/s/1MG44TRIgqV6m_StfB_yBqQ?pwd=e9hs) |
+| **Chinese-PERT-base**            | 中文 |  EXT数据<sup>[1]</sup>  | [TensorFlow（密码：rcsw）](https://pan.baidu.com/s/1yDHkYKmdaJkliTGHWQtdFA?pwd=rcsw) |
+| **English-PERT-large** (uncased) | 英文 | WikiBooks<sup>[2]</sup> | [TensorFlow（密码：wxwi）](https://pan.baidu.com/s/1h62V5y_XH6VqlD820KnkFw?pwd=wxwi) |
+| **English-PERT-base** (uncased)  | 英文 | WikiBooks<sup>[2]</sup> | [TensorFlow（密码：8jgq）](https://pan.baidu.com/s/1fX4Epbgk8rR49A0xIAEWDw?pwd=8jgq) |
 
 > [1] EXT数据包括：中文维基百科，其他百科、新闻、问答等数据，总词数达5.4B，约占用20G磁盘空间，与MacBERT相同。  
 > [2] Wikipedia + BookCorpus
